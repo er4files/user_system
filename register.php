@@ -38,21 +38,19 @@ if (isset($_POST['register'])) {
 <html>
 <head>
     <title>Register</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<div class="container">
     <h2>User Registration</h2>
     <form method="post">
-        <label>Username:</label><br>
-        <input type="text" name="username" required><br>
-
-        <label>Email:</label><br>
-        <input type="email" name="email" required><br>
-
-        <label>Password:</label><br>
-        <input type="password" name="password" required><br><br>
-
+        <input type="text" name="username" placeholder="Username" required><br>
+        <input type="email" name="email" placeholder="Email" required><br>
+        <input type="password" name="password" placeholder="Password" required><br>
         <button type="submit" name="register">Register</button>
     </form>
-    <p style="color:red;"><?php echo $message; ?></p>
+    <p class="message error"><?php echo $message; ?></p>
+    <p class="message">Sudah punya akun? <a href="login.php">Login</a></p>
+</div>
 </body>
 </html>
